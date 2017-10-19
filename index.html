@@ -11,9 +11,42 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>FE TRial</p>
+    <body class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navText"><button type='button' class='btn btn-default' id='sign-up-button'>Sign Up</button></li>
+            <li class="navText"><button type='submit' class='btn btn-default' id='sign-in-button'>Login</button></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- visual response back  -->
+<div class='messageboard' id='message'></div>
+
+<br>
+
+<!-- sign up form -->
+  <form class='signup' id='signUpForm'>
+  <h5> Please enter Email PW and confirm PW to create an account</h5>
+  <input name="credentials[email]" type="text" value="Test@example.email">
+  <input name="credentials[password]" type="password" value="This is an example PW">
+  <input name="credentials[password_confirmation]" type="password" value="This is an example pw">
+  <button type="button" class="btn btn-default" >Sign UP</button>
+  <br>
+  <button type="button" class="btn btn-default" id="hideSignUp" >Hide Sign Up Form</button>
+</form>
+
+<br>
+<!-- Sign in form -->
+<form class='signin' id='signInForm'>
+  <h5> Please enter Email PW to login to your account</h5>
+  <input name="credentials[email]" type="text" value="Test@example.email">
+  <input name="credentials[password]" type="password" value="This is an example PW">
+  <button type="submit" class="btn btn-default">Login</button>
+  <br>
+  <button type="button" class="btn btn-default" id="hideSignIn" >Hide Sign In Form</button>
+</form>
     </body>
 </html>

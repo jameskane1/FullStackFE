@@ -1,2 +1,14 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.navbar {
+  background-color: #ADD8E6
+}
+
+.signup {
+  display: none;
+}
+
+.signin {
+  display: none;
+}
