@@ -33,7 +33,8 @@ $(() => {
 
   // sign up event handler
   $('#signInForm').on('submit', submitValues.onSignIn)
-  // change password handler
+  // sign out handler
+  $('#sign-out-button').on('click', submitValues.onSignOut)
 })
 
 // use require with a reference to bundle the file and use it in this file

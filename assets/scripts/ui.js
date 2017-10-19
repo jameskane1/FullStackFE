@@ -19,7 +19,17 @@ const signInFailure = function (error) {
   $('#message').text('Incorrect Email or PW', error)
 }
 
+const signOutSuccess = function () {
+  $('#message').text('You have successfully signed out')
+  store.user = null
+}
+
+const signOutFailure = function (error) {
+  $('#message').text('Unable to sign out. Please try again', error)
+}
+
 const removeClass = function () {
+  $('.signOut').removeClass('signOut')
 }
 
 const addClass = function () {
@@ -29,11 +39,20 @@ const addClass = function () {
   $('#sign-in-button').addClass('signin')
 }
 
+const signOutClass = function () {
+  $('#signOut').addClass('signOut')
+  $('#sign-up-button').removeClass('signup')
+  $('#sign-in-button').removeClass('signin')
+}
+
 export {
   signUpFailure,
   signInSuccess,
   signInFailure,
   signUpSuccess,
   removeClass,
-  addClass
+  addClass,
+  signOutSuccess,
+  signOutFailure,
+  signOutClass
 }
