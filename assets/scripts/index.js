@@ -2,6 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
+const submitValues = require('./events.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -26,6 +27,13 @@ $(() => {
     $('#signInForm').addClass('signin')
     $('#sign-in-button').removeClass('signin')
   })
+
+  // form submit functionality
+  $('#signUpForm').on('submit', submitValues.onSignUp)
+
+  // sign up event handler
+  $('#signInForm').on('submit', submitValues.onSignIn)
+  // change password handler
 })
 
 // use require with a reference to bundle the file and use it in this file
