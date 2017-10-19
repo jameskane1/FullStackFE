@@ -30,6 +30,7 @@ const signOutFailure = function (error) {
 
 const removeClass = function () {
   $('.signOut').removeClass('signOut')
+  $('#change-Password').removeClass('signOut')
 }
 
 const addClass = function () {
@@ -41,8 +42,17 @@ const addClass = function () {
 
 const signOutClass = function () {
   $('#signOut').addClass('signOut')
+  $('#change-password').addClass('signOut')
   $('#sign-up-button').removeClass('signup')
   $('#sign-in-button').removeClass('signin')
+}
+
+const changePasswordSuccess = function (data) {
+  $('#message').text('Changed Password successfully')
+}
+
+const changePasswordFailure = function (error) {
+  $('#message').text('Incorrect PW. Please try again', error)
 }
 
 export {
@@ -54,5 +64,7 @@ export {
   addClass,
   signOutSuccess,
   signOutFailure,
-  signOutClass
+  signOutClass,
+  changePasswordSuccess,
+  changePasswordFailure
 }
