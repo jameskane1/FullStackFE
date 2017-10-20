@@ -42,7 +42,6 @@ const onPlayInput = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   api.playInput(data)
-  console.log('data is ', data)
     .then(ui.playInputSuccess)
     .catch(ui.playInputFailure)
 }

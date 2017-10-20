@@ -59,6 +59,7 @@ const changePasswordFailure = function (error) {
 
 const playInputSuccess = function (data) {
   $('#message').text('Your play has been added!!')
+  store.play = data.play
 }
 
 const playInputFailure = function (error) {
