@@ -17,17 +17,23 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   display: none;
 }
 
+.changePW {
+    display: none;
+}
+
 .box {
   border: solid;
   height: 150px;
   margin: 5px;
   text-align: center;
   font-size: 15px;
+  display: inline-block;
+  text-align: center;
 }
 
 .bigbox{
   border: solid;
-  height: 300px;
+  height: inherit;
   margin: 5px;
   text-align: center;
   font-size: 15px;

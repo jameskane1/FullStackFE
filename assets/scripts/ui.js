@@ -46,7 +46,8 @@ const signOutClass = function () {
   $('#change-password').addClass('signOut')
   $('#playInput').addClass('signOut')
   $('#plays').addClass('signOut')
-  $('#previousPlays').addClass('signOut')
+  $('#previous').addClass('signOut')
+  $('#delete_play').addClass('signOut')
   $('#sign-up-button').removeClass('signup')
   $('#sign-in-button').removeClass('signin')
 }

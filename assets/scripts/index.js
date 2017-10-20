@@ -28,6 +28,11 @@ $(() => {
     $('#sign-in-button').removeClass('signin')
   })
 
+  $('#changePW').click(function () {
+    $('#change-password').removeClass('changePW')
+    $('#changePW').addClass('signin')
+  })
+
   // form submit functionality
   $('#signUpForm').on('submit', submitValues.onSignUp)
 
@@ -36,7 +41,7 @@ $(() => {
   // sign out handler
   $('#sign-out-button').on('click', submitValues.onSignOut)
 
-  $('#change-password').on('submit', submitValues.onChangePassword)
+  $('#changePW').on('click', submitValues.onChangePW)
 
   $('#playInput').on('submit', submitValues.onPlayInput)
 
