@@ -45,6 +45,7 @@ const signOutClass = function () {
   $('#signOut').addClass('signOut')
   $('#change-password').addClass('signOut')
   $('#playInput').addClass('signOut')
+  $('#plays').addClass('signOut')
   $('#sign-up-button').removeClass('signup')
   $('#sign-in-button').removeClass('signin')
 }
@@ -68,6 +69,7 @@ const playInputFailure = function (error) {
 
 const playShowSuccess = function (data) {
   const lastPlay = data.plays.length - 1
+  $('#lastPlay').text('This is the last play that you recorded')
   $('#team').text('Team ' + JSON.stringify(data.plays[lastPlay].team))
   $('#yard_line').text('Yard Line ' + JSON.stringify(data.plays[lastPlay].yard_line))
   $('#play_type').text('Play Type ' + JSON.stringify(data.plays[lastPlay].play_type))
