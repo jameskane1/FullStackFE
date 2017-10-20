@@ -43,7 +43,14 @@ const onPlayInput = function (event) {
   event.preventDefault()
   api.playInput(data)
     .then(ui.playInputSuccess)
+    .then(onPlayShow)
     .catch(ui.playInputFailure)
+}
+
+const onPlayShow = function () {
+  api.playData()
+    .then(ui.playShowSuccess)
+    .catch(ui.playShowSuccess)
 }
 
 export {
@@ -51,5 +58,6 @@ export {
   onSignIn,
   onSignOut,
   onChangePassword,
-  onPlayInput
+  onPlayInput,
+  onPlayShow
 }

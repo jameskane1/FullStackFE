@@ -52,10 +52,21 @@ const playInput = function (data) {
   })
 }
 
+const playData = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/plays',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createSignUp,
   createSignIn,
   signOut,
   changePassword,
-  playInput
+  playInput,
+  playData
 }

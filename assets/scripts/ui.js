@@ -66,6 +66,19 @@ const playInputFailure = function (error) {
   $('#message').text('Your play could not be added', error)
 }
 
+const playShowSuccess = function (data) {
+  const lastPlay = data.plays.length - 1
+  $('#team').text('Team ' + JSON.stringify(data.plays[lastPlay].team))
+  $('#yard_line').text('Yard Line ' + JSON.stringify(data.plays[lastPlay].yard_line))
+  $('#play_type').text('Play Type ' + JSON.stringify(data.plays[lastPlay].play_type))
+  $('#yards_gained').text('Yards Gained ' + JSON.stringify(data.plays[lastPlay].yards_gained))
+  $('#play_result').text('Play Result ' + JSON.stringify(data.plays[lastPlay].play_result))
+}
+
+const playShowFailure = function (error) {
+  $('#plays').text('Could not find any plays', error)
+}
+
 export {
   signUpFailure,
   signInSuccess,
@@ -79,5 +92,7 @@ export {
   changePasswordSuccess,
   changePasswordFailure,
   playInputSuccess,
-  playInputFailure
+  playInputFailure,
+  playShowSuccess,
+  playShowFailure
 }

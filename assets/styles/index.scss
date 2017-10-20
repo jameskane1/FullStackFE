@@ -16,3 +16,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 .signOut {
   display: none;
 }
+
+.box {
+  border: solid;
+  height: 150px;
+  margin: 5px;
+  text-align: center;
+  font-size: 15px;
+}
