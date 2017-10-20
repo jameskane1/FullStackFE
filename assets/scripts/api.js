@@ -62,11 +62,23 @@ const playData = function () {
   })
 }
 
+const deletePlay = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/plays/' + data.play.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   createSignUp,
   createSignIn,
   signOut,
   changePassword,
   playInput,
-  playData
+  playData,
+  deletePlay
 }

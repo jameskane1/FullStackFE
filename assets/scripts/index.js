@@ -39,6 +39,10 @@ $(() => {
   $('#change-password').on('submit', submitValues.onChangePassword)
 
   $('#playInput').on('submit', submitValues.onPlayInput)
+
+  $('#previousPlays').on('click', submitValues.onPreviousPlayShow)
+
+  $('#delete_play').on('submit', submitValues.onDeletePlay)
 })
 
 // use require with a reference to bundle the file and use it in this file

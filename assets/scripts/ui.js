@@ -46,6 +46,7 @@ const signOutClass = function () {
   $('#change-password').addClass('signOut')
   $('#playInput').addClass('signOut')
   $('#plays').addClass('signOut')
+  $('#previousPlays').addClass('signOut')
   $('#sign-up-button').removeClass('signup')
   $('#sign-in-button').removeClass('signin')
 }
@@ -81,6 +82,22 @@ const playShowFailure = function (error) {
   $('#plays').text('Could not find any plays', error)
 }
 
+const previousPlaysSuccess = function (data) {
+  $('#previousPlaysMessage').text('previous plays ' + JSON.stringify(data.plays))
+}
+
+const previousPlaysFailure = function (error) {
+  $('#message').text('Your plays cannot be viewed', error)
+}
+
+const deletePlaySuccess = function (data) {
+  $('#message').text('Your play was deleted')
+}
+
+const deletePlayFailure = function (error) {
+  $('#message').text('Your plays cannot be deleted at this time', error)
+}
+
 export {
   signUpFailure,
   signInSuccess,
@@ -96,5 +113,9 @@ export {
   playInputSuccess,
   playInputFailure,
   playShowSuccess,
-  playShowFailure
+  playShowFailure,
+  previousPlaysSuccess,
+  previousPlaysFailure,
+  deletePlaySuccess,
+  deletePlayFailure
 }

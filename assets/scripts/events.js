@@ -53,11 +53,28 @@ const onPlayShow = function () {
     .catch(ui.playShowSuccess)
 }
 
+const onPreviousPlayShow = function (event) {
+  event.preventDefault()
+  api.playData()
+    .then(ui.previousPlaysSuccess)
+    .catch(ui.previousPlaysFailure)
+}
+
+const onDeletePlay = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.deletePlay(data)
+    .then(ui.deletePlaySuccess)
+    .catch(ui.deletePlayFailure)
+}
+
 export {
   onSignUp,
   onSignIn,
   onSignOut,
   onChangePassword,
   onPlayInput,
-  onPlayShow
+  onPlayShow,
+  onPreviousPlayShow,
+  onDeletePlay
 }
