@@ -31,6 +31,7 @@ const signOutFailure = function (error) {
 const removeClass = function () {
   $('.signOut').removeClass('signOut')
   $('#change-Password').removeClass('signOut')
+  $('#playInput').removeClass('signOut')
 }
 
 const addClass = function () {
@@ -43,6 +44,7 @@ const addClass = function () {
 const signOutClass = function () {
   $('#signOut').addClass('signOut')
   $('#change-password').addClass('signOut')
+  $('#playInput').addClass('signOut')
   $('#sign-up-button').removeClass('signup')
   $('#sign-in-button').removeClass('signin')
 }
@@ -53,6 +55,14 @@ const changePasswordSuccess = function (data) {
 
 const changePasswordFailure = function (error) {
   $('#message').text('Incorrect PW. Please try again', error)
+}
+
+const playInputSuccess = function (data) {
+  $('#message').text('Your play has been added!!')
+}
+
+const playInputFailure = function (error) {
+  $('#message').text('Your play could not be added', error)
 }
 
 export {
@@ -66,5 +76,7 @@ export {
   signOutFailure,
   signOutClass,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  playInputSuccess,
+  playInputFailure
 }

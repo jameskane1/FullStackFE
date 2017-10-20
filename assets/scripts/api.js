@@ -41,9 +41,21 @@ const changePassword = function (data) {
   })
 }
 
+const playInput = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/plays',
+    method: 'POST',
+    data: '{}',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createSignUp,
   createSignIn,
   signOut,
-  changePassword
+  changePassword,
+  playInput
 }

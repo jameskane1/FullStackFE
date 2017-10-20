@@ -37,6 +37,8 @@ $(() => {
   $('#sign-out-button').on('click', submitValues.onSignOut)
 
   $('#change-password').on('submit', submitValues.onChangePassword)
+
+  $('#playInput').on('submit', submitValues.onPlayInput)
 })
 
 // use require with a reference to bundle the file and use it in this file
