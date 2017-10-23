@@ -34,8 +34,48 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .then(ui.signOutClass)
     .then(() => {
-      $('#previousPlaysMessage')[0].reset()
+      $('#change-password')[0].reset()
     })
+    .then(() => {
+      $('#playInput')[0].reset()
+    })
+    .then(() => {
+      $('#signUpForm')[0].reset()
+    })
+    .then(() => {
+      $('#signInForm')[0].reset()
+    })
+    .then(() => {
+      $('#delete_play')[0].reset()
+    })
+    .then(() => {
+      $('#updatePlay')[0].reset()
+    })
+    .then(() => {
+      $('#get1Play')[0].reset()
+    })
+    .then(() => {
+      $('#previousPlaysMessage').empty()
+    })
+    .then(() => {
+      $('#lastPlay').empty()
+    })
+    .then(() => {
+      $('#team').empty()
+    })
+    .then(() => {
+      $('#yard_line').empty()
+    })
+    .then(() => {
+      $('#play_type').empty()
+    })
+    .then(() => {
+      $('#yards_gained').empty()
+    })
+    .then(() => {
+      $('#play_result').empty()
+    })
+    .then(ui.changePWClass)
     .catch(ui.signOutFailure)
 }
 
@@ -58,6 +98,9 @@ const onPlayInput = function (event) {
     .then(onPlayShow)
     .then(() => {
       $('#playInput')[0].reset()
+    })
+    .then(() => {
+      $('#previousPlaysMessage').empty()
     })
     .catch(ui.playInputFailure)
 }
@@ -83,6 +126,9 @@ const onDeletePlay = function (event) {
     .then(() => {
       $('#delete_play')[0].reset()
     })
+    .then(() => {
+      $('#previousPlaysMessage').empty()
+    })
     .catch(ui.deletePlayFailure)
 }
 
@@ -90,10 +136,12 @@ const onUpdatePlay = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   api.updatePlay(data)
-  console.log('data is ', data)
     .then(ui.updatePlaySuccess)
     .then(() => {
       $('#updatePlay')[0].reset()
+    })
+    .then(() => {
+      $('#previousPlaysMessage').empty()
     })
     .catch(ui.updatePlayFailure)
 }
@@ -106,6 +154,7 @@ const onGet1Play = function (event) {
     .then(() => {
       $('#get1Play')[0].reset()
     })
+    .then(ui.updateClass)
     .catch(ui.get1PlayFailure)
 }
 

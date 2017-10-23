@@ -31,8 +31,10 @@ const signOutFailure = function (error) {
 
 const removeClass = function () {
   $('.signOut').removeClass('signOut')
-  $('#change-Password').removeClass('signOut')
+  $('#changePassWord').removeClass('signin')
+  $('#change-Password').removeClass('changePW')
   $('#playInput').removeClass('signOut')
+  $('#get1Play').removeClass('signOut')
 }
 
 const addClass = function () {
@@ -42,15 +44,23 @@ const addClass = function () {
   $('#sign-in-button').addClass('signin')
 }
 
+const updateClass = function () {
+  $('#updatePlay').removeClass('changePlay')
+}
+
 const signOutClass = function () {
   $('#signOut').addClass('signOut')
-  $('#change-password').addClass('signOut')
   $('#playInput').addClass('signOut')
   $('#plays').addClass('signOut')
   $('#previous').addClass('signOut')
+  $('#updatePlay').addClass('changePlay')
+  $('#get1Play').addClass('signOut')
   $('#delete_play').addClass('signOut')
   $('#sign-up-button').removeClass('signup')
   $('#sign-in-button').removeClass('signin')
+}
+const changePWClass = function () {
+  $('#change-password').addClass('changePW')
 }
 
 const changePasswordSuccess = function (data) {
@@ -142,5 +152,7 @@ export {
   updatePlaySuccess,
   updatePlayFailure,
   get1PlaySuccess,
-  get1PlayFailure
+  get1PlayFailure,
+  updateClass,
+  changePWClass
 }

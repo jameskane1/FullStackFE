@@ -21,6 +21,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
     display: none;
 }
 
+.changePlay {
+    display: none;
+}
+
+.prevPlayMessage{
+  text-align: left;
+}
+
 .box {
   border: solid;
   height: 150px;

@@ -90,7 +90,7 @@
 
 <br>
 
-<form id="get1Play" class='getSinglePlay'>
+<form id="get1Play" class='signOut'>
 <fieldset>
 <legend>If you would like to update a play enter the ID below</legend>
 <input type='text' name='play[id]' placeholder="Enter Play ID number" required>
@@ -98,7 +98,7 @@
 </fieldset>
 </form>
 
-<form id="updatePlay" class='update'>
+<form id="updatePlay" class='changePlay'>
 <fieldset>
 <legend>Enter the updated info for the above selected play id</legend>
 <input type='text' name='play[team]' placeholder="Team with ball" required>
@@ -128,10 +128,8 @@
 
 
 <div class='signOut' id='previous'>
-<!-- game board row 1 -->
       <div class="row" >
         <button type="button" class="btn btn-default" id='previousPlays'>Show All Previous Plays</button>
-        <h4 id='totalPreviousPlays'>These are your prior saved plays</h4>
         <div class="col-xs-12 col-md-12 bigbox" id='previousPlaysMessage'></div>
       </div>
 </div>
