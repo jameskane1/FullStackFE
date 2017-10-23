@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./store')
+const showPlaysTemplate = require('/Users/n0252077/wdi/projects/Jimmy_Kane_FullStackFE/assets/scripts/templates/helpers/previousPlays.handlebars')
 
 const signUpSuccess = function (data) {
   $('#message').text('you have successfully signed up!')
@@ -84,7 +85,9 @@ const playShowFailure = function (error) {
 }
 
 const previousPlaysSuccess = function (data) {
-  $('#previousPlaysMessage').text('previous plays ' + JSON.stringify(data.plays))
+  // $('#previousPlaysMessage').text('previous plays ' + JSON.stringify(data.plays))
+  const showPlaysHtml = showPlaysTemplate({ plays: data.plays })
+  $('#previousPlaysMessage').append(showPlaysHtml)
 }
 
 const previousPlaysFailure = function (error) {

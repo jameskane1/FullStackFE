@@ -1,0 +1,22 @@
+{{#each plays as |play|}}
+
+ <!-- Developers, why are we using data-id and not just id? -->
+<div class="col-xs-8 col-md-8 minibox">
+  <h1 data-id="{{play.id}}"> <small>Team: {{play.team}}</small></h1>
+  <ul data-id="{{play.id}}">
+    <li><div>
+      Yard Line : {{play.yard_line}}
+  </div>
+  <li><div>
+      Play Type: {{play.play_type}}
+</div>
+<li><div>
+      Yards Gained: {{play.yards_gained}}
+</div>
+<li><div>
+      Play Result: {{play.play_result}}
+</div>
+</ul>
+
+</div>
+{{/each}}
