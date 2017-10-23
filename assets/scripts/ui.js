@@ -99,6 +99,23 @@ const deletePlayFailure = function (error) {
   $('#message').text('Your plays cannot be deleted at this time', error)
 }
 
+const updatePlaySuccess = function (data) {
+  $('#message').text('Your play has been updated!')
+}
+
+const updatePlayFailure = function (error) {
+  $('#message').text('Your plays cannot be updated at this time', error)
+}
+
+const get1PlaySuccess = function (data) {
+  $('#message').text('Your input play has been selected to be edited')
+  store.play1 = data.play
+}
+
+const get1PlayFailure = function (error) {
+  $('#message').text('Your play could not be retrived', error)
+}
+
 export {
   signUpFailure,
   signInSuccess,
@@ -118,5 +135,9 @@ export {
   previousPlaysSuccess,
   previousPlaysFailure,
   deletePlaySuccess,
-  deletePlayFailure
+  deletePlayFailure,
+  updatePlaySuccess,
+  updatePlayFailure,
+  get1PlaySuccess,
+  get1PlayFailure
 }

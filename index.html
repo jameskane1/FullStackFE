@@ -18,7 +18,7 @@
           <div class='signOut' id='signOut'>
           <ul class="nav navbar-nav navbar-left">
             <li class="navText"><button type='submit' class='btn btn-default' id='sign-out-button'>Sign Out</button></li>
-            <li class="navText"><button type='submit' class='btn btn-default' id='changePW'>Change PW</button></li>
+            <li class="navText"><button type='submit' class='btn btn-default' id='changePassWord'>Change PW</button></li>
           </ul>
         </div>
           <ul class="nav navbar-nav navbar-right">
@@ -87,7 +87,30 @@
 <input type="submit" class="btn btn-default" value="Delete Play">
 </fieldset>
 </form>
+
 <br>
+
+<form id="get1Play" class='getSinglePlay'>
+<fieldset>
+<legend>If you would like to update a play enter the ID below</legend>
+<input type='text' name='play[id]' placeholder="Enter Play ID number" required>
+<input type="submit" class="btn btn-default" value="Get One Play">
+</fieldset>
+</form>
+
+<form id="updatePlay" class='update'>
+<fieldset>
+<legend>Enter the updated info for the above selected play id</legend>
+<input type='text' name='play[team]' placeholder="Team with ball" required>
+<input type='number' name='play[yard_line]' placeholder="Yard Line" required>
+<input type='text' name='play[play_type]' placeholder="Play Type" required>
+<input type='number' name='play[yards_gained]' placeholder="Yards Gained" required>
+<input type='text' name='play[play_result]' placeholder="Play Result" required>
+<input type="submit" class="btn btn-default" value="Update Play">
+</fieldset>
+</form>
+<br>
+
 
 <div class='signOut' id='plays'>
 <!-- game board row 1 -->

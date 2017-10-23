@@ -8,6 +8,9 @@ const onSignUp = function (event) {
   const data = getFormFields(this)
   api.createSignUp(data)
     .then(ui.signUpSuccess)
+    .then(() => {
+      $('#signUpForm')[0].reset()
+    })
     .catch(ui.signUpFailure)
 }
 
@@ -18,6 +21,9 @@ const onSignIn = function (event) {
     .then(ui.signInSuccess)
     .then(ui.removeClass)
     .then(ui.addClass)
+    .then(() => {
+      $('#signInForm')[0].reset()
+    })
     .catch(ui.signInFailure)
 }
 
@@ -35,6 +41,9 @@ const onChangePassword = function (event) {
   event.preventDefault()
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
+    .then(() => {
+      $('#change-password')[0].reset()
+    })
     .catch(ui.changePasswordFailure)
 }
 
@@ -44,6 +53,9 @@ const onPlayInput = function (event) {
   api.playInput(data)
     .then(ui.playInputSuccess)
     .then(onPlayShow)
+    .then(() => {
+      $('#playInput')[0].reset()
+    })
     .catch(ui.playInputFailure)
 }
 
@@ -65,7 +77,32 @@ const onDeletePlay = function (event) {
   event.preventDefault()
   api.deletePlay(data)
     .then(ui.deletePlaySuccess)
+    .then(() => {
+      $('#delete_play')[0].reset()
+    })
     .catch(ui.deletePlayFailure)
+}
+
+const onUpdatePlay = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.updatePlay(data)
+    .then(ui.updatePlaySuccess)
+    .then(() => {
+      $('#updatePlay')[0].reset()
+    })
+    .catch(ui.updatePlayFailure)
+}
+
+const onGet1Play = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.get1Play(data)
+    .then(ui.get1PlaySuccess)
+    .then(() => {
+      $('#get1Play')[0].reset()
+    })
+    .catch(ui.get1PlayFailure)
 }
 
 export {
@@ -76,5 +113,7 @@ export {
   onPlayInput,
   onPlayShow,
   onPreviousPlayShow,
-  onDeletePlay
+  onDeletePlay,
+  onUpdatePlay,
+  onGet1Play
 }

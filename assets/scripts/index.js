@@ -28,9 +28,9 @@ $(() => {
     $('#sign-in-button').removeClass('signin')
   })
 
-  $('#changePW').click(function () {
+  $('#changePassWord').click(function () {
     $('#change-password').removeClass('changePW')
-    $('#changePW').addClass('signin')
+    $('#changePassWord').addClass('signin')
   })
 
   // form submit functionality
@@ -41,13 +41,19 @@ $(() => {
   // sign out handler
   $('#sign-out-button').on('click', submitValues.onSignOut)
 
-  $('#changePW').on('click', submitValues.onChangePW)
+  $('#change-password').on('submit', submitValues.onChangePassword)
 
   $('#playInput').on('submit', submitValues.onPlayInput)
 
   $('#previousPlays').on('click', submitValues.onPreviousPlayShow)
 
   $('#delete_play').on('submit', submitValues.onDeletePlay)
+
+  // Update play form submittal
+  $('#updatePlay').on('submit', submitValues.onUpdatePlay)
+
+  // get on play id
+  $('#get1Play').on('submit', submitValues.onGet1Play)
 })
 
 // use require with a reference to bundle the file and use it in this file

@@ -73,6 +73,36 @@ const deletePlay = function (data) {
   })
 }
 
+const get1Play = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/plays/' + data.play.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+const updatePlay = function (team, yardline, playtype, yardsgained, playresult) {
+  return $.ajax({
+    url: config.apiOrigin + '/plays/' + store.play1.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'play': {
+        'team': team,
+        'yard_line': yardline,
+        'play_type': playtype,
+        'yards_gained': yardsgained,
+        'play_result': playresult
+      }
+    }
+  })
+}
+
 module.exports = {
   createSignUp,
   createSignIn,
@@ -80,5 +110,7 @@ module.exports = {
   changePassword,
   playInput,
   playData,
-  deletePlay
+  deletePlay,
+  updatePlay,
+  get1Play
 }
