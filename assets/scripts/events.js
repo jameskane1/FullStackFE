@@ -102,6 +102,12 @@ const onPlayInput = function (event) {
     .then(() => {
       $('#previousPlaysMessage').empty()
     })
+    .then(() => {
+      $('#plays').addClass('signOut')
+    })
+    .then(() => {
+      $('#updatePlay').addClass('signOut')
+    })
     .catch(ui.playInputFailure)
 }
 
@@ -129,6 +135,12 @@ const onDeletePlay = function (event) {
     .then(() => {
       $('#previousPlaysMessage').empty()
     })
+    .then(() => {
+      $('#plays').addClass('signOut')
+    })
+    .then(() => {
+      $('#updatePlay').addClass('signOut')
+    })
     .catch(ui.deletePlayFailure)
 }
 
@@ -143,6 +155,12 @@ const onUpdatePlay = function (event) {
     .then(() => {
       $('#previousPlaysMessage').empty()
     })
+    .then(() => {
+      $('#plays').addClass('signOut')
+    })
+    .then(() => {
+      $('#updatePlay').addClass('signOut')
+    })
     .catch(ui.updatePlayFailure)
 }
 
@@ -154,7 +172,17 @@ const onGet1Play = function (event) {
     .then(() => {
       $('#get1Play')[0].reset()
     })
+    .then(() => {
+      $('#lastPlay').empty()
+    })
+    .then(() => {
+      $('#plays').removeClass('signOut')
+    })
+    .then(() => {
+      $('#updatePlay').removeClass('signOut')
+    })
     .then(ui.updateClass)
+    .then(ui.get1PlayShow)
     .catch(ui.get1PlayFailure)
 }
 

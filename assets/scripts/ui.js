@@ -80,18 +80,27 @@ const playInputFailure = function (error) {
   $('#message').text('Your play could not be added', error)
 }
 
-const playShowSuccess = function (data) {
-  const lastPlay = data.plays.length - 1
-  $('#lastPlay').text('This is the last play that you recorded')
-  $('#team').text('Team ' + JSON.stringify(data.plays[lastPlay].team))
-  $('#yard_line').text('Yard Line ' + JSON.stringify(data.plays[lastPlay].yard_line))
-  $('#play_type').text('Play Type ' + JSON.stringify(data.plays[lastPlay].play_type))
-  $('#yards_gained').text('Yards Gained ' + JSON.stringify(data.plays[lastPlay].yards_gained))
-  $('#play_result').text('Play Result ' + JSON.stringify(data.plays[lastPlay].play_result))
-}
+// const playShowSuccess = function (data) {
+//   const lastPlay = data.plays.length - 1
+//   $('#lastPlay').text('This is the last play that you recorded')
+//   $('#team').text('Team ' + JSON.stringify(data.plays[lastPlay].team))
+//   $('#yard_line').text('Yard Line ' + JSON.stringify(data.plays[lastPlay].yard_line))
+//   $('#play_type').text('Play Type ' + JSON.stringify(data.plays[lastPlay].play_type))
+//   $('#yards_gained').text('Yards Gained ' + JSON.stringify(data.plays[lastPlay].yards_gained))
+//   $('#play_result').text('Play Result ' + JSON.stringify(data.plays[lastPlay].play_result))
+// }
 
 const playShowFailure = function (error) {
   $('#plays').text('Could not find any plays', error)
+}
+
+const get1PlayShow = function (data) {
+  $('#lastPlay').text('Below is the info for the searched play id :' + store.play1.id)
+  $('#team').text('Team ' + JSON.stringify(store.play1.team))
+  $('#yard_line').text('Yard Line ' + JSON.stringify(store.play1.yard_line))
+  $('#play_type').text('Play Type ' + JSON.stringify(store.play1.play_type))
+  $('#yards_gained').text('Yards Gained ' + JSON.stringify(store.play1.yards_gained))
+  $('#play_result').text('Play Result ' + JSON.stringify(store.play1.play_result))
 }
 
 const previousPlaysSuccess = function (data) {
@@ -143,7 +152,7 @@ export {
   changePasswordFailure,
   playInputSuccess,
   playInputFailure,
-  playShowSuccess,
+  // playShowSuccess,
   playShowFailure,
   previousPlaysSuccess,
   previousPlaysFailure,
@@ -154,5 +163,6 @@ export {
   get1PlaySuccess,
   get1PlayFailure,
   updateClass,
-  changePWClass
+  changePWClass,
+  get1PlayShow
 }
