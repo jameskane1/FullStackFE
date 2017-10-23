@@ -104,7 +104,6 @@ const get1PlayShow = function (data) {
 }
 
 const previousPlaysSuccess = function (data) {
-  // $('#previousPlaysMessage').text('previous plays ' + JSON.stringify(data.plays))
   const showPlaysHtml = showPlaysTemplate({ plays: data.plays })
   $('#previousPlaysMessage').append(showPlaysHtml)
 }

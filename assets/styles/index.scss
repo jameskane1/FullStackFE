@@ -5,7 +5,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   background-color: #ADD8E6
 }
 
-.messageboard {
+.messageboard{
   text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
@@ -19,6 +19,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
                font-size: 30px;
+               color: #F2552C;
 }
 
 .signup {
@@ -61,6 +62,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 5px;
   text-align: center;
   font-size: 15px;
+  width: inherit;
 }
 .minibox {
   border: solid;
@@ -68,5 +70,4 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 5px;
   text-align: center;
   font-size: 15px;
-
 }
