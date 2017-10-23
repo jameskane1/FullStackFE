@@ -193,9 +193,6 @@ const onGet1Play = function (event) {
     .then(() => {
       $('#updatePlay').removeClass('signOut')
     })
-    .then(() => {
-      $('#previousPlays').removeClass('signOut')
-    })
     .then(ui.updateClass)
     .then(ui.get1PlayShow)
     .catch(ui.get1PlayFailure)
