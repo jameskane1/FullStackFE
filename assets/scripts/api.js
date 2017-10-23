@@ -84,22 +84,22 @@ const get1Play = function (data) {
   })
 }
 
-const updatePlay = function (team, yardline, playtype, yardsgained, playresult) {
+const updatePlay = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/plays/' + store.play1.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      'play': {
-        'team': team,
-        'yard_line': yardline,
-        'play_type': playtype,
-        'yards_gained': yardsgained,
-        'play_result': playresult
-      }
-    }
+    data: data
+    // {
+    //   'play': {
+    //     'team': team,
+    //     'yard_line': yardline,
+    //     'play_type': playtype,
+    //     'yards_gained': yardsgained,
+    //     'play_result': playresult
+    //   }
   })
 }
 

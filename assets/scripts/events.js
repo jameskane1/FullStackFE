@@ -33,6 +33,9 @@ const onSignOut = function (event) {
   api.signOut(data)
     .then(ui.signOutSuccess)
     .then(ui.signOutClass)
+    .then(() => {
+      $('#previousPlaysMessage')[0].reset()
+    })
     .catch(ui.signOutFailure)
 }
 
@@ -87,6 +90,7 @@ const onUpdatePlay = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   api.updatePlay(data)
+  console.log('data is ', data)
     .then(ui.updatePlaySuccess)
     .then(() => {
       $('#updatePlay')[0].reset()
