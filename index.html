@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>FE Setup</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class='signOut' id='signOut'>
+          <ul class="nav navbar-nav navbar-left">
+            <li class="navText"><button type='submit' class='btn btn-default' id='sign-out-button'>Sign Out</button></li>
+            <li class="navText"><button type='submit' class='btn btn-default' id='changePassWord'>Change PW</button></li>
+          </ul>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navText"><button type='submit' class='btn btn-default' id='sign-up-button'>Sign Up</button></li>
+            <li class="navText"><button type='submit' class='btn btn-default' id='sign-in-button'>Login</button></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- visual response back  -->
+<div class='messageboard' id='message'></div>
+
+<br>
+
+<form id="change-password" class='changePW'>
+<fieldset>
+<legend>Change Password</legend>
+<input type='text' name='passwords[old]' placeholder="Enter Old Password">
+<input type='text' name='passwords[new]' placeholder="Enter New Password">
+<input type="submit" class="btn btn-default" value="Change Password!">
+</fieldset>
+</form>
+
+<br>
+
+<!-- sign up form -->
+  <form class='signup' id='signUpForm'>
+  <h5> Please enter Email PW and confirm PW to create an account</h5>
+  <input name="credentials[email]" type="text" value="Test@example.email">
+  <input name="credentials[password]" type="password" value="This is an example PW">
+  <input name="credentials[password_confirmation]" type="password" value="This is an example pw">
+  <button type="submit" class="btn btn-default" >Sign UP</button>
+  <br>
+  <button type="button" class="btn btn-default" id="hideSignUp" >Hide Sign Up Form</button>
+</form>
+
+<br>
+<!-- Sign in form -->
+<form class='signin' id='signInForm'>
+  <h5> Please enter Email PW to login to your account</h5>
+  <input name="credentials[email]" type="text" value="Test@example.email">
+  <input name="credentials[password]" type="password" value="This is an example PW">
+  <button type="submit" class="btn btn-default">Login</button>
+  <br>
+  <button type="button" class="btn btn-default" id="hideSignIn" >Hide Sign In Form</button>
+</form>
+
+<form class='signOut' id="playInput" >
+<fieldset>
+<legend>Enter a new play!</legend>
+<input type='text' name='play[team]' placeholder="Team with ball" required>
+<input type='number' name='play[yard_line]' placeholder="Yard Line" required>
+<input type='text' name='play[play_type]' placeholder="Play Type" required>
+<input type='number' name='play[yards_gained]' placeholder="Yards Gained" required>
+<input type='text' name='play[play_result]' placeholder="Play Result" required>
+<input type="submit" class="btn btn-default" value="Submit Play!" required>
+</fieldset>
+</form>
+
+<br>
+
+<form id="delete_play" class='signOut'>
+<fieldset>
+<legend>If you would like to delete a play enter the ID below</legend>
+<input type='text' name='play[id]' placeholder="Enter Play ID number" required>
+<input type="submit" class="btn btn-default" value="Delete Play">
+</fieldset>
+</form>
+
+<br>
+
+<form id="get1Play" class='signOut'>
+<fieldset>
+<legend>If you would like to view one play please enter the ID</legend>
+<input type='text' name='play[id]' placeholder="Enter Play ID number" required>
+<input type="submit" class="btn btn-default" value="Get One Play">
+</fieldset>
+</form>
+
+<form id="updatePlay" class='changePlay'>
+<fieldset>
+<legend>If you would like to update the currently selected play, enter data below</legend>
+<input type='text' name='play[team]' placeholder="Team with ball" required>
+<input type='number' name='play[yard_line]' placeholder="Yard Line" required>
+<input type='text' name='play[play_type]' placeholder="Play Type" required>
+<input type='number' name='play[yards_gained]' placeholder="Yards Gained" required>
+<input type='text' name='play[play_result]' placeholder="Play Result" required>
+<input type="submit" class="btn btn-default" value="Update Play">
+</fieldset>
+</form>
+<br>
+
+
+<div class='signOut' id='plays'>
+<!-- game board row 1 -->
+      <div class="row" >
+        <h4 id='lastPlay'></h4>
+        <div class="col-xs-2 col-md-2 box" id='team'></div>
+        <div class="col-xs-2 col-md-2 box" id='yard_line'></div>
+        <div class="col-xs-2 col-md-2 box" id='play_type'></div>
+        <div class="col-xs-2 col-md-2 box" id='yards_gained'></div>
+        <div class="col-xs-2 col-md-2 box" id='play_result'></div>
+      </div>
+</div>
+
+<br>
+
+
+<div class='signOut' id='previous'>
+      <div class="row" >
+        <button type="button" class="btn btn-default" id='previousPlays'>Show All Plays</button>
+        <div class="col-xs-12 col-md-12 bigbox" id='previousPlaysMessage'></div>
+      </div>
+</div>
+
+<br>
+
+
+
+    </body>
+</html>
