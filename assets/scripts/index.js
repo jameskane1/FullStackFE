@@ -54,6 +54,8 @@ $(() => {
 
   // get on play id
   $('#get1Play').on('submit', submitValues.onGet1Play)
+
+  document.body.style.backgroundColor = 'transparent'
 })
 
 // use require with a reference to bundle the file and use it in this file

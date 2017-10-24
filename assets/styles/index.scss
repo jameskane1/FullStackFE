@@ -1,6 +1,44 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+#change-password {
+  background-color:#ACEDFF;
+  border: ridge;
+}
+
+#delete_play {
+  background-color:#89BBFE;
+  border: ridge;
+}
+
+#get1Play {
+  background-color:#6F8AB7;
+  border: ridge;
+}
+
+#updatePlay {
+  background-color:#6F8AB7;
+  border-top: none;
+  border-left:ridge;
+  border-right:ridge;
+  border-bottom: ridge;
+}
+
+#playInput {
+  background-color: #8C8994;
+  border: ridge;
+}
+
+#plays{
+  background-color: #ACEDFF;
+  border: ridge;
+  width: 100%;
+}
+
+html {
+  background-color: #CAE5FF;
+  background-size: cover;
+}
 
 .tommytd {
   display: block;
@@ -8,7 +46,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   width: 200px;
 }
 .navbar {
-  background-color: #ADD8E6
+  background-color: #615D6C
 }
 
 .messageboard{
@@ -52,10 +90,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   text-align: left;
 }
 
+.row{
+  margin: inherit;
+}
 .box {
   border: solid;
   height: 150px;
   margin: 5px;
+  width: inherit;
   text-align: center;
   font-size: 15px;
   display: inline-block;
@@ -69,6 +111,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   font-size: 15px;
   width: inherit;
 }
+#lastPlay {
+  margin: inherit;
+}
+
 .minibox {
   border: solid;
   height: inherit;
