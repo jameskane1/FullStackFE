@@ -121,7 +121,7 @@ const deletePlaySuccess = function (data) {
 }
 
 const deletePlayFailure = function (error) {
-  $('#message').text('Your plays cannot be deleted at this time', error)
+  $('#message').text('The entered id does not exist, or you do not have any saved plays', error)
 }
 
 const updatePlaySuccess = function (data) {
@@ -140,7 +140,7 @@ const get1PlaySuccess = function (data) {
 }
 
 const get1PlayFailure = function (error) {
-  $('#message').text('Your play could not be retrived', error)
+  $('#message').text('The entered id does not exist, or you have no saved plays', error)
   $('#message').prepend('<img id="theImg" img class="tommytd" src="https://pbs.twimg.com/profile_images/772956577003364353/FKeAt0QO.jpg" />')
 }
 
