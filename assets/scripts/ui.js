@@ -104,8 +104,12 @@ const get1PlayShow = function (data) {
 }
 
 const previousPlaysSuccess = function (data) {
-  const showPlaysHtml = showPlaysTemplate({ plays: data.plays })
-  $('#previousPlaysMessage').append(showPlaysHtml)
+  if (data.plays[0] === null || data.plays[0] === '' || data.plays[0] === undefined || data.plays[0] === 0 || data.plays[0] === false) {
+    $('#previousPlaysMessage').text('You need to add a play to view all plays')
+  } else {
+    const showPlaysHtml = showPlaysTemplate({ plays: data.plays })
+    $('#previousPlaysMessage').append(showPlaysHtml)
+  }
 }
 
 const previousPlaysFailure = function (error) {
