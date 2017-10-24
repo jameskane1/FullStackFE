@@ -27,7 +27,7 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('You have successfully signed out')
   store.user = null
-  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://usatthebiglead.files.wordpress.com/2012/08/tom-brady-happy-face.jpg" />')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://usatthebiglead.files.wordpress.com/2012/08/tom-brady-happy-face.jpg" />')
 }
 
 const signOutFailure = function (error) {
