@@ -21,6 +21,7 @@ const signInSuccess = function (data) {
 
 const signInFailure = function (error) {
   $('#message').text('Incorrect Email or PW', error)
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/9201281/20170907231330.jpg" />')
 }
 
 const signOutSuccess = function () {
@@ -75,6 +76,7 @@ const changePasswordSuccess = function (data) {
 
 const changePasswordFailure = function (error) {
   $('#message').text('Incorrect PW. Please try again', error)
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://pbs.twimg.com/profile_images/772956577003364353/FKeAt0QO.jpg" />')
 }
 
 const playInputSuccess = function (data) {
@@ -124,6 +126,7 @@ const deletePlayFailure = function (error) {
 
 const updatePlaySuccess = function (data) {
   $('#message').text('Your play has been updated!')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://a.abcnews.com/images/Entertainment/HT_brady_gisele_jef_141027_4x3_992.jpg" />')
 }
 
 const updatePlayFailure = function (error) {
@@ -133,10 +136,12 @@ const updatePlayFailure = function (error) {
 const get1PlaySuccess = function (data) {
   $('#message').text('Your input play has been selected to be edited')
   store.play1 = data.play
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://pbs.twimg.com/media/BuHyfTVCIAAVbkG.jpg" />')
 }
 
 const get1PlayFailure = function (error) {
   $('#message').text('Your play could not be retrived', error)
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://www.chicagonow.com/blogs/jay-cutler-superstar/brady%20mad.jpg" />')
 }
 
 export {
