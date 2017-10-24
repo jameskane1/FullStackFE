@@ -10,13 +10,13 @@ const signUpSuccess = function (data) {
 
 const signUpFailure = function (error) {
   $('#message').text('Your signup was unsuccessful. Please try again.', error)
-  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://static.socialitelife.com/uploads/2013/08/01/Tom-Brady-birthday-08012013-12-580x435.jpg" />')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/9201281/20170907231330.jpg" />')
 }
 
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   store.user = data.user
-  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://i4.dailyrecord.co.uk/incoming/article5084433.ece/ALTERNATES/s615/JS55773878-1.jpg" />')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://media.rbl.ms/image?u=%2Ffiles%2F2015%2F07%2F17%2F635727730275772136-426711804_image.jpg&ho=http%3A%2F%2Fcdn1.theodysseyonline.com&s=877&h=b006888de789759d6e3d505b613a7b93e2501b5fbbed6f4ba7246abb335aa35f&size=980x&c=3161196094" />')
 }
 
 const signInFailure = function (error) {
@@ -27,7 +27,7 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('You have successfully signed out')
   store.user = null
-  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://usatthebiglead.files.wordpress.com/2012/08/tom-brady-happy-face.jpg" />')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://media.rbl.ms/image?u=%2Ffiles%2F2015%2F07%2F17%2F635727730275772136-426711804_image.jpg&ho=http%3A%2F%2Fcdn1.theodysseyonline.com&s=877&h=b006888de789759d6e3d505b613a7b93e2501b5fbbed6f4ba7246abb335aa35f&size=980x&c=3161196094" />')
 }
 
 const signOutFailure = function (error) {
@@ -126,7 +126,7 @@ const deletePlayFailure = function (error) {
 
 const updatePlaySuccess = function (data) {
   $('#message').text('Your play has been updated!')
-  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://a.abcnews.com/images/Entertainment/HT_brady_gisele_jef_141027_4x3_992.jpg" />')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://pbs.twimg.com/media/BuHyfTVCIAAVbkG.jpg" />')
 }
 
 const updatePlayFailure = function (error) {
@@ -141,7 +141,7 @@ const get1PlaySuccess = function (data) {
 
 const get1PlayFailure = function (error) {
   $('#message').text('Your play could not be retrived', error)
-  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://www.chicagonow.com/blogs/jay-cutler-superstar/brady%20mad.jpg" />')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://pbs.twimg.com/profile_images/772956577003364353/FKeAt0QO.jpg" />')
 }
 
 export {
