@@ -92,14 +92,6 @@ const updatePlay = function (data) {
       Authorization: 'Token token=' + store.user.token
     },
     data: data
-    // {
-    //   'play': {
-    //     'team': team,
-    //     'yard_line': yardline,
-    //     'play_type': playtype,
-    //     'yards_gained': yardsgained,
-    //     'play_result': playresult
-    //   }
   })
 }
 
