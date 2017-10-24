@@ -5,15 +5,18 @@ const showPlaysTemplate = require('/Users/n0252077/wdi/projects/Jimmy_Kane_FullS
 
 const signUpSuccess = function (data) {
   $('#message').text('you have successfully signed up!')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://media.rbl.ms/image?u=%2Ffiles%2F2015%2F07%2F17%2F635727730275772136-426711804_image.jpg&ho=http%3A%2F%2Fcdn1.theodysseyonline.com&s=877&h=b006888de789759d6e3d505b613a7b93e2501b5fbbed6f4ba7246abb335aa35f&size=980x&c=3161196094" />')
 }
 
 const signUpFailure = function (error) {
-  $('#message').text('Your signup was unseccessful. Please try again.', error)
+  $('#message').text('Your signup was unsuccessful. Please try again.', error)
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://static.socialitelife.com/uploads/2013/08/01/Tom-Brady-birthday-08012013-12-580x435.jpg" />')
 }
 
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   store.user = data.user
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://i4.dailyrecord.co.uk/incoming/article5084433.ece/ALTERNATES/s615/JS55773878-1.jpg" />')
 }
 
 const signInFailure = function (error) {
@@ -23,6 +26,7 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('You have successfully signed out')
   store.user = null
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="http://usatthebiglead.files.wordpress.com/2012/08/tom-brady-happy-face.jpg" />')
 }
 
 const signOutFailure = function (error) {
@@ -39,6 +43,7 @@ const removeClass = function () {
 
 const addClass = function () {
   $('#signUpForm').addClass('signup')
+  $('#plays').addClass('signOut')
   $('#sign-up-button').addClass('signup')
   $('#signInForm').addClass('signin')
   $('#sign-in-button').addClass('signin')
@@ -65,6 +70,7 @@ const changePWClass = function () {
 
 const changePasswordSuccess = function (data) {
   $('#message').text('Changed Password successfully')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://cbssports.com/images/blogs/Tom_Brady_Facebook_Post_Were_On_To_Buffalo.png" />')
 }
 
 const changePasswordFailure = function (error) {
@@ -74,21 +80,12 @@ const changePasswordFailure = function (error) {
 const playInputSuccess = function (data) {
   $('#message').text('Your play has been added!!')
   store.play = data.play
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://i.pinimg.com/736x/cc/45/17/cc4517dde9d5af605c027374aa9cfa7d--th-birthday-happy-birthdays.jpg" />')
 }
 
 const playInputFailure = function (error) {
   $('#message').text('Your play could not be added', error)
 }
-
-// const playShowSuccess = function (data) {
-//   const lastPlay = data.plays.length - 1
-//   $('#lastPlay').text('This is the last play that you recorded')
-//   $('#team').text('Team ' + JSON.stringify(data.plays[lastPlay].team))
-//   $('#yard_line').text('Yard Line ' + JSON.stringify(data.plays[lastPlay].yard_line))
-//   $('#play_type').text('Play Type ' + JSON.stringify(data.plays[lastPlay].play_type))
-//   $('#yards_gained').text('Yards Gained ' + JSON.stringify(data.plays[lastPlay].yards_gained))
-//   $('#play_result').text('Play Result ' + JSON.stringify(data.plays[lastPlay].play_result))
-// }
 
 const playShowFailure = function (error) {
   $('#plays').text('Could not find any plays', error)
@@ -118,6 +115,7 @@ const previousPlaysFailure = function (error) {
 
 const deletePlaySuccess = function (data) {
   $('#message').text('Your play was deleted')
+  $('#message').prepend('<img id="theImg" img class="tommytd" src="https://www.gannett-cdn.com/-mm-/1ae56f03a80de4c1b6acf60e1b19ff90e3a94d8c/c=66-69-883-683&r=x393&c=520x390/local/-/media/2017/02/05/USATODAY/USATODAY/636219346127531736-USP-NFL-SUPER-BOWL-LI-NEW-ENGLAND-PATRIOTS-VS-ATL-88578658.JPG" />')
 }
 
 const deletePlayFailure = function (error) {
